@@ -11,10 +11,12 @@ import {
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent {
   @ViewChild('inputSaluti') valoreInput!: ElementRef<HTMLInputElement>;
 
-  valore = 'ciao';
+  today = Date.now();
+
+  numero = 5.9274641275;
 
   title = 'corso-angular';
   persone = [
@@ -24,18 +26,4 @@ export class AppComponent implements OnInit, AfterViewInit {
     { nome: 'leonardo', cognome: 'pannochia', isOnline: true, color: 'yellow' },
     { nome: 'flavio', cognome: 'babbo', isOnline: false, color: 'brown' },
   ];
-
-  ngOnInit(): void {
-    console.log('ngOnInit');
-    console.log(this.valoreInput);
-  }
-
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-    console.log(this.valoreInput);
-  }
-
-  onClick() {
-    console.log(this.valoreInput.nativeElement.value);
-  }
 }

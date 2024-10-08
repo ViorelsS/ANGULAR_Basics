@@ -1,2 +1,5 @@
-<input #inputSaluti value="valore" />
-<button (click)="onClick()">Stampa</button>
+<p>{{ today | date : "d MMM yyyy - h:mm:ss" }}</p>
+
+<p>{{ numero | percent : "1.0-4" }}</p>
+
+<p>{{ numero | currency : "EUR" : "symbol-narrow" : "1.3-5" }}</p>
