@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProvaComponent } from './prova/prova.component';
@@ -23,6 +22,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     MatInputModule,
     FormsModule,
   ],
+  // I providers sono i services
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
