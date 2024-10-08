@@ -14,49 +14,26 @@ import {
   templateUrl: './prova.component.html',
   styleUrl: './prova.component.css',
 })
-export class ProvaComponent
-  implements
-    OnInit,
-    AfterContentChecked,
-    AfterContentInit,
-    AfterViewChecked,
-    AfterViewInit,
-    DoCheck,
-    OnDestroy
-{
-  nome = 'roger';
-
-  cani = [
-    {
-      nome: 'roger',
-      razza: 'golden',
-      descrizione: ` The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain the Shiba Inu was originally bred for hunting.`,
-    },
-  ];
+export class ProvaComponent implements OnInit {
+  isDisabled = false;
+  immagine = '';
+  immagine1 = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1wyN7FRrwyiBOKcWePNb8r9QyOLegzy52zg&s`;
+  immagine2 = `https://material.angular.io/assets/img/examples/shiba2.jpg`;
 
   constructor() {
     console.log('costruttore');
   }
-  ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked');
-  }
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit');
-  }
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked');
-  }
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-  }
-  ngDoCheck(): void {
-    console.log('ngDoCheck');
-  }
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy');
-  }
 
   ngOnInit(): void {
     console.log('ngOnInit');
+    let counter = 0;
+    setInterval(() => {
+      if (counter % 2 == 0) {
+        this.immagine = this.immagine1;
+      } else {
+        this.immagine = this.immagine2;
+      }
+      counter++;
+    }, 1000);
   }
 }
