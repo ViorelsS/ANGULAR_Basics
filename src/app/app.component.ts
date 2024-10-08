@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-basics';
+  isVisible = true;
 
   onInput = (event: Event) => {
     this.title = (<HTMLInputElement>event.target).value;
