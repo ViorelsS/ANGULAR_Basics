@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('inputSaluti') valoreInput!: ElementRef<HTMLInputElement>;
+
+  valore = 'ciao';
+
   title = 'corso-angular';
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
@@ -15,16 +25,17 @@ export class AppComponent {
     { nome: 'flavio', cognome: 'babbo', isOnline: false, color: 'brown' },
   ];
 
-  onClick = () =>
-    (this.persone = [
-      { nome: 'AAA', cognome: 'rossi', isOnline: true, color: 'blue' },
-      { nome: 'BBBB', cognome: 'verdi', isOnline: false, color: 'green' },
-      { nome: 'CCCC', cognome: 'neri', isOnline: false, color: 'red' },
-      { nome: 'DDDD', cognome: 'pannochia', isOnline: true, color: 'yellow' },
-      { nome: 'EEEEE', cognome: 'babbo', isOnline: false, color: 'brown' },
-    ]);
+  ngOnInit(): void {
+    console.log('ngOnInit');
+    console.log(this.valoreInput);
+  }
 
-  onRiceviDati = (nome: string) => {
-    this.title = nome;
-  };
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+    console.log(this.valoreInput);
+  }
+
+  onClick() {
+    console.log(this.valoreInput.nativeElement.value);
+  }
 }
