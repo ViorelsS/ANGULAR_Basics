@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-basics';
   isVisible = true;
+  numero = 7;
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true },
     { nome: 'marco', cognome: 'verdi', isOnline: false },
