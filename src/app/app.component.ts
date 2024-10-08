@@ -9,12 +9,14 @@ export class AppComponent {
   title = 'ng-basics';
   isVisible = true;
   numero = 7;
+  color = 'green';
+
   persone = [
-    { nome: 'luca', cognome: 'rossi', isOnline: true },
-    { nome: 'marco', cognome: 'verdi', isOnline: false },
-    { nome: 'anna', cognome: 'neri', isOnline: false },
-    { nome: 'leonardo', cognome: 'pannochia', isOnline: true },
-    { nome: 'flavio', cognome: 'babbo', isOnline: false },
+    { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
+    { nome: 'marco', cognome: 'verdi', isOnline: false, color: 'green' },
+    { nome: 'anna', cognome: 'neri', isOnline: false, color: 'red' },
+    { nome: 'leonardo', cognome: 'pannochia', isOnline: true, color: 'yellow' },
+    { nome: 'flavio', cognome: 'babbo', isOnline: false, color: 'brown' },
   ];
 
   onInput = (event: Event) => {
