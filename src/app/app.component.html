@@ -1,2 +1,3 @@
-<app-prova [data]="persone"></app-prova>
-<button (click)="onClick()">Cambia</button>
+<h1>Nome: {{ title }}</h1>
+
+<app-prova (mandaDatiEvento)="onRiceviDati($event)"></app-prova>

@@ -23,4 +23,8 @@ export class AppComponent {
       { nome: 'DDDD', cognome: 'pannochia', isOnline: true, color: 'yellow' },
       { nome: 'EEEEE', cognome: 'babbo', isOnline: false, color: 'brown' },
     ]);
+
+  onRiceviDati = (nome: string) => {
+    this.title = nome;
+  };
 }
