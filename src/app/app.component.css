@@ -1,7 +1,22 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    padding: 20px;
+body {
+  padding: 20px;
+}
+.cerchio-verde,
+.cerchio-rosso {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.cerchio-verde {
+  background: green;
+}
+
+.cerchio-rosso {
+  background: red;
 }

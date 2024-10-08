@@ -1,11 +1,20 @@
-<mat-form-field class="example-full-width">
-  <mat-label>Favorite food</mat-label>
-  <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
-</mat-form-field>
-<button mat-raised-button color="primary" (click)="onClick($event)">
-  Gioca
-</button>
+<!-- <div *ngFor="let persona of persone">
+  <span class="cerchio-verde" *ngIf="persona.isOnline"></span>
+  <span class="cerchio-rosso" *ngIf="!persona.isOnline"></span>
+  <p>{{ persona.nome }} {{ persona.cognome }}</p>
+</div> -->
 
-<p *ngIf="isVisible; then bloccoIf; else bloccoElse"></p>
-<ng-template #bloccoIf> <p>sono visibile</p></ng-template>
-<ng-template #bloccoElse> <p>non sono visibile</p></ng-template>
+<div
+  *ngFor="
+    let persona of persone;
+    index as i;
+    count as c;
+    first as isFirst;
+    even as isEven;
+    odd as isOdd
+  "
+>
+  <p *ngIf="isEven" class="cerchio-verde"></p>
+  <p *ngIf="isOdd" class="cerchio-rosso"></p>
+  <p>{{ persona.nome }} {{ persona.cognome }}</p>
+</div>
