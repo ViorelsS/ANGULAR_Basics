@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ng-basics';
   isVisible = true;
   numero = 7;
-  color = 'blue';
+  color = '';
 
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
