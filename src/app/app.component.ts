@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ng-basics';
   isVisible = true;
   numero = 7;
-  color = 'green';
+  color = 'blue';
 
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
@@ -26,5 +26,9 @@ export class AppComponent {
 
   onClick = (event: Event) => {
     this.title = 'Ho cliccato sul bottone!';
+  };
+
+  cambiaColoreEvidenziatore = (colore: string) => {
+    this.color = colore;
   };
 }

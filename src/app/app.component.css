@@ -4,6 +4,9 @@
   border-radius: 50%;
   background: blue;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
@@ -27,5 +30,5 @@ li > p {
 }
 
 .prova {
-  border-radius: 0%;
+  border-radius: 20%;
 }
