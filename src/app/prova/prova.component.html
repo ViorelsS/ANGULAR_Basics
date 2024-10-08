@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+    <mat-card-title>
+        <!-- STRING INTERPOLATION -->
+        {{ cani[0].nome.toUpperCase()}}
+    </mat-card-title>
+    <mat-card-subtitle>{{2 < 5 ? 'Querty':"Ciao"}}</mat-card-subtitle>
+    <mat-card-content>
+        <p>This card intdeterminates progress bar.</p>
+        <p>{{cani[0].descrizione }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>
