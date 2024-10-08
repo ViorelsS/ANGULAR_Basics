@@ -1,35 +1,16 @@
-<!-- <div *ngFor="let persona of persone">
-  <span class="cerchio-verde" *ngIf="persona.isOnline"></span>
-  <span class="cerchio-rosso" *ngIf="!persona.isOnline"></span>
-  <p>{{ persona.nome }} {{ persona.cognome }}</p>
-</div> -->
-
-<!-- <div
-  *ngFor="
-    let persona of persone;
-    index as i;
-    count as c;
-    first as isFirst;
-    even as isEven;
-    odd as isOdd
-  "
->
-  <p *ngIf="isEven" class="cerchio-verde"></p>
-  <p *ngIf="isOdd" class="cerchio-rosso"></p>
-  <p>{{ persona.nome }} {{ persona.cognome }}</p>
-</div> -->
-
-<!-- <div [ngSwitch]="numero">
-  <p *ngSwitchCase="1">uno</p>
-  <p *ngSwitchCase="2">due</p>
-  <p *ngSwitchCase="3">tre</p>
-  <p *ngSwitchCase="4">quattro</p>
-  <p *ngSwitchDefault>default</p>
-</div> -->
-
 <ul>
-  <li *ngFor="let persona of persone">
-    <div class="cerchio" [ngStyle]="{ background: persona.color }"></div>
+  <li *ngFor="let persona of persone; index as i">
+    <!-- [ngClass]="persona.isOnline ? 'cerchio-online prova' : 'cerchio-offline'" -->
+
+    <div
+      class="cerchio"
+      [ngClass]="{
+        'cerchio-online prova': persona.isOnline,
+        'cerchio-offline': !persona.isOnline
+      }"
+    >
+      {{ i }}
+    </div>
     <p>{{ persona.nome }} {{ persona.cognome }}</p>
   </li>
 </ul>

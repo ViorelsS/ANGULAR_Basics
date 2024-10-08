@@ -1,29 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 20px;
-}
-.cerchio-verde,
-.cerchio-rosso {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-}
-
-.cerchio-verde {
-  background: green;
-}
-
-.cerchio-rosso {
-  background: red;
-}
-
 .cerchio {
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: blue;
   margin-right: 10px;
@@ -37,4 +14,18 @@ li {
 
 li > p {
   margin-bottom: 0;
+}
+
+.cerchio-online {
+  background-color: green;
+  color: white;
+}
+
+.cerchio-offline {
+  background: red;
+  color: white;
+}
+
+.prova {
+  border-radius: 0%;
 }
