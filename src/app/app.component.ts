@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ng-basics';
-  isVisible = true;
-  numero = 7;
-  color = '';
-
+  title = 'corso-angular';
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
     { nome: 'marco', cognome: 'verdi', isOnline: false, color: 'green' },
@@ -19,16 +15,12 @@ export class AppComponent {
     { nome: 'flavio', cognome: 'babbo', isOnline: false, color: 'brown' },
   ];
 
-  onInput = (event: Event) => {
-    this.title = (<HTMLInputElement>event.target).value;
-    console.log((<HTMLInputElement>event.target).value);
-  };
-
-  onClick = (event: Event) => {
-    this.title = 'Ho cliccato sul bottone!';
-  };
-
-  cambiaColoreEvidenziatore = (colore: string) => {
-    this.color = colore;
-  };
+  onClick = () =>
+    (this.persone = [
+      { nome: 'AAA', cognome: 'rossi', isOnline: true, color: 'blue' },
+      { nome: 'BBBB', cognome: 'verdi', isOnline: false, color: 'green' },
+      { nome: 'CCCC', cognome: 'neri', isOnline: false, color: 'red' },
+      { nome: 'DDDD', cognome: 'pannochia', isOnline: true, color: 'yellow' },
+      { nome: 'EEEEE', cognome: 'babbo', isOnline: false, color: 'brown' },
+    ]);
 }

@@ -1,12 +1,9 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
   Component,
-  DoCheck,
-  OnDestroy,
+  Input,
+  OnChanges,
   OnInit,
+  SimpleChanges,
 } from '@angular/core';
 
 @Component({
@@ -14,26 +11,16 @@ import {
   templateUrl: './prova.component.html',
   styleUrl: './prova.component.css',
 })
-export class ProvaComponent implements OnInit {
-  isDisabled = false;
-  immagine = '';
-  immagine1 = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1wyN7FRrwyiBOKcWePNb8r9QyOLegzy52zg&s`;
-  immagine2 = `https://material.angular.io/assets/img/examples/shiba2.jpg`;
+export class ProvaComponent implements OnInit, OnChanges {
+  @Input() data: any;
 
-  constructor() {
-    console.log('costruttore');
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log('ngOnInit');
-    let counter = 0;
-    setInterval(() => {
-      if (counter % 2 == 0) {
-        this.immagine = this.immagine1;
-      } else {
-        this.immagine = this.immagine2;
-      }
-      counter++;
-    }, 1000);
+    console.log(this.data);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 }

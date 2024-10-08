@@ -1,22 +1,2 @@
-<h2>Scegli il colore dell'evidenziatore</h2>
-<div>
-  <input
-    type="radio"
-    name="coloreEvidenziatore"
-    (click)="cambiaColoreEvidenziatore('red')"
-  />Rosso
-  <input
-    type="radio"
-    name="coloreEvidenziatore"
-    (click)="cambiaColoreEvidenziatore('pink')"
-  />Rosa
-  <input
-    type="radio"
-    name="coloreEvidenziatore"
-    (click)="cambiaColoreEvidenziatore('purple')"
-  />Viola
-</div>
-
-<p [appHighlight]="color" defaultColor="orange">Ciao sono un elemento</p>
-<p [appHighlight]="color" defaultColor="blue">Ciao sono un elemento</p>
-<p [appHighlight]="color" defaultColor="red">Ciao sono un elemento</p>
+<app-prova [data]="persone"></app-prova>
+<button (click)="onClick()">Cambia</button>
